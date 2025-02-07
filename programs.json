@@ -1,0 +1,75 @@
+{
+    "Chrome": {
+      "url": "https://dl.google.com/chrome/install/latest/chrome_installer.exe",
+      "command": "<file> /silent",
+      "original_name": "ChromeSetup.exe"
+    },
+    "Steam": {
+      "url": "https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe",
+      "command": "<file> /silent",
+      "original_name": "SteamSetup.exe"
+    },
+    "Discord": {
+      "url": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64",
+      "command": "<file> /silent",
+      "original_name": "DiscordSetup.exe"
+    },
+    "Telegram": {
+      "url": "https://telegram.org/dl/desktop/win64",
+      "command": "<file> /silent",
+      "original_name": "tsetup-x64.5.6.3.exe"
+    },
+    "ShareX": {
+      "url": "https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe",
+      "command": "<file> /silent",
+      "original_name": "ShareX-16.1.0-setup.exe"
+    },
+    "Visual Studio Code": {
+      "url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+      "command": "<file> /silent",
+      "original_name": "VSCodeUserSetup-x64-1.94.2.exe"
+    },
+    "Python": {
+      "url": "https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe",
+      "command": "<file> /silent",
+      "original_name": "python-3.12.6-amd64.exe"
+    },
+    "Epic Games Laucher": {
+      "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+      "command": "<file> /silent",
+      "original_name": "EpicInstaller-15.17.1.msi"
+    },
+    "RadminVPN": {
+      "url": "https://download.radmin-vpn.com/download/files/Radmin_VPN_1.4.4642.1.exe",
+      "command": "<file> /silent",
+      "original_name": "Radmin_VPN_1.4.4642.1.exe"
+    },
+    "Java": {
+      "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=250111_d8aa705069af427f9b83e66b34f5e380",
+      "command": "<file> /silent",
+      "original_name": "JavaSetup8u421.exe"
+    },
+    "WinRAR": {
+      "url": "https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701ru.exe",
+      "command": "<file> /silent",
+      "original_name": "winrar-x64-701ru.exe"
+    },
+    "Ccleaner": {
+      "url": "https://bits.avcdn.net/productfamily_CCLEANER/insttype_FREE/platform_WIN_PIR/installertype_ONLINE/build_RELEASE/cookie_mmm_ccl_007_999_z8j_m",
+      "command": "<file> /silent",
+      "original_name": "ccsetup629.exe"
+    },"SQLite": {
+      "url": "https://download.sqlitebrowser.org/DB.Browser.for.SQLite-v3.13.0-win64.msi",
+      "command": "<file> /silent",
+      "original_name": "DB.Browser.for.SQLite-v3.13.0-win64.msi"
+    },"Windscribe": {
+      "url": "https://rus.windscribe.com/install/desktop/windows",
+      "command": "<file> /silent",
+      "original_name": "Windscribe_2.11.11.exe"
+    },"Git": {
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe",
+      "command": "<file> /silent",
+      "original_name": "Git-2.47.0-64-bit.exe"
+    }
+  }
+  

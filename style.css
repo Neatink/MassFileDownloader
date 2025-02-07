@@ -1,0 +1,144 @@
+QWidget {
+    background-color: #2E3440;
+    color: #ECEFF4;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+QPushButton {
+    background-color: #4C566A;
+    color: #D8DEE9;
+    border: 1px solid #434C5E;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+QPushButton:hover {
+    background-color: #5E81AC;
+}
+
+QPushButton:pressed {
+    background-color: #3B4252;
+}
+
+QLabel {
+    color: #D8DEE9;
+    font-size: 15px;
+}
+
+QListWidget {
+    background-color: #3B4252;
+    border: 1px solid #434C5E;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: transparent;
+    width: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: transparent;
+    height: 0px;
+}
+
+QListWidget::item {
+    padding: 8px;
+}
+
+QListWidget::item:selected {
+    background-color: #4C566A;
+    color: #ECEFF4;
+}
+
+QMessageBox {
+    background-color: #2E3440;
+    color: #ECEFF4;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2E3440;
+    color: #D8DEE9;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #3B4252;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #88C0D0;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    color: #81A1C1;
+    border-bottom: 2px solid #88C0D0;
+    padding-bottom: 5px;
+    font-size: 1.75rem;
+}
+
+.description, .features, .screenshots {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #4C566A;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #5E81AC;
+}
+
+.screenshot-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.screenshot {
+    max-width: 48%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #88C0D0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #D8DEE9;
+}
