@@ -45,7 +45,7 @@ class DownloadThread(QThread):
 
 
 def load_apps_config():
-    with open('C:\\Projects\\Python\\MassFileDownloader\\programs.json', 'r') as config_file:
+    with open(r'programs.json', 'r') as config_file:
         return json.load(config_file)
 
 
@@ -59,7 +59,7 @@ class DownloadingWindow(QWidget):
         super().__init__()
         self.app_name = app_name
         self.main_window = main_window 
-        self.setWindowIcon(QIcon('Photos\\downloading.png'))
+        self.setWindowIcon(QIcon(r'Photos\\downloading.png'))
         self.initialize_ui()
 
     def initialize_ui(self):
@@ -114,7 +114,7 @@ class FolderSelectionWindow(QWidget):
     def __init__(self):
         super().__init__()
         global file_path,xGL,yGL
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\folder1.png'))
+        self.setWindowIcon(QIcon(r'Photos\\folder1.png'))
         self.setWindowTitle('Вибір папки для файлiв')
         self.setGeometry(xGL, yGL, 400, 150)
         
@@ -124,7 +124,7 @@ class FolderSelectionWindow(QWidget):
 
         self.back_button = QPushButton('')
         self.back_button.clicked.connect(self.backbaton)
-        self.back_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\back.png'))
+        self.back_button.setIcon(QIcon(r'Photos\\back.png'))
         self.back_button.setToolTip('Назад') 
         self.back_button.setIconSize(QSize(16, 16))
         self.back_button.setFixedSize(30, 30)
@@ -172,7 +172,7 @@ class FolderSelectionWindow(QWidget):
 class InfoWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\info1.png'))
+        self.setWindowIcon(QIcon(r'Photos\\info1.png'))
         self.setup_ui()
         self.folder_selected = None 
 
@@ -191,7 +191,7 @@ class InfoWindow(QWidget):
         self.layout1.addWidget(self.greeting_label)
 
         self.skip_button = QPushButton('', self)
-        self.skip_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\skip.png'))
+        self.skip_button.setIcon(QIcon(r'Photos\\skip.png'))
         self.skip_button.setIconSize(QSize(15, 15))
         self.skip_button.setFixedSize(30, 30)
         self.skip_button.setToolTip('Пропустити всi кроки')
@@ -249,7 +249,7 @@ class InfoWindow(QWidget):
         self.close()
 
     def open_info_html(self, event):
-        webbrowser.open('C:\\Projects\\Python\\MassFileDownloader\\info.html')
+        webbrowser.open(r'info.html')
 
     def enable_button(self):
         global start_button  
@@ -366,7 +366,7 @@ class InfoWindow(QWidget):
 class SettingsWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\settings.png'))
+        self.setWindowIcon(QIcon(r'Photos\\settings.png'))
         self.initialize_ui()
         self.app_data = load_apps_config()
         self.current_app_index = 0
@@ -381,7 +381,7 @@ class SettingsWindow(QWidget):
         layout = QVBoxLayout()
 
         self.back_button = QPushButton('')
-        self.back_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\back.png'))
+        self.back_button.setIcon(QIcon(r'Photos\\back.png'))
         self.back_button.setToolTip('Назад') 
         self.back_button.setIconSize(QSize(16, 16))
         self.back_button.setFixedSize(30, 30)
@@ -403,7 +403,7 @@ class SettingsWindow(QWidget):
         try:
             if SetupStart == True:
                 self.galochka_button = QPushButton(self)
-                self.galochka_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\galochka.png'))
+                self.galochka_button.setIcon(QIcon(r'Photos\\galochka.png'))
                 self.galochka_button.setIconSize(QSize(25, 25))
                 self.galochka_button.setFixedSize(30, 30)
                 self.galochka_opacity_effect = QGraphicsOpacityEffect()
@@ -413,7 +413,7 @@ class SettingsWindow(QWidget):
                 button_layout.addWidget(self.galochka_button)
 
                 self.krest_button = QPushButton(self)
-                self.krest_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\krest.png'))
+                self.krest_button.setIcon(QIcon(r'Photos\\krest.png'))
                 self.krest_button.setIconSize(QSize(25, 25))
                 self.krest_button.setFixedSize(30, 30)
                 self.krest_opacity_effect = QGraphicsOpacityEffect()
@@ -423,7 +423,7 @@ class SettingsWindow(QWidget):
                 button_layout.addWidget(self.krest_button)
             elif SetupStart == False:
                 self.galochka_button = QPushButton(self)
-                self.galochka_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\galochka.png'))
+                self.galochka_button.setIcon(QIcon(r'Photos\\galochka.png'))
                 self.galochka_button.setIconSize(QSize(25, 25))
                 self.galochka_button.setFixedSize(30, 30)
                 self.galochka_opacity_effect = QGraphicsOpacityEffect()
@@ -433,7 +433,7 @@ class SettingsWindow(QWidget):
                 button_layout.addWidget(self.galochka_button)
 
                 self.krest_button = QPushButton(self)
-                self.krest_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\krest.png'))
+                self.krest_button.setIcon(QIcon(r'Photos\\krest.png'))
                 self.krest_button.setIconSize(QSize(25, 25))
                 self.krest_button.setFixedSize(30, 30)
                 self.krest_opacity_effect = QGraphicsOpacityEffect()
@@ -446,7 +446,7 @@ class SettingsWindow(QWidget):
             SetupStart = False
             if SetupStart == False:
                 self.galochka_button = QPushButton(self)
-                self.galochka_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\galochka.png'))
+                self.galochka_button.setIcon(QIcon(r'Photos\\galochka.png'))
                 self.galochka_button.setIconSize(QSize(25, 25))
                 self.galochka_button.setFixedSize(30, 30)
                 self.galochka_opacity_effect = QGraphicsOpacityEffect()
@@ -456,7 +456,7 @@ class SettingsWindow(QWidget):
                 button_layout.addWidget(self.galochka_button)
 
                 self.krest_button = QPushButton(self)
-                self.krest_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\krest.png'))
+                self.krest_button.setIcon(QIcon(r'Photos\\krest.png'))
                 self.krest_button.setIconSize(QSize(25, 25))
                 self.krest_button.setFixedSize(30, 30)
                 self.krest_opacity_effect = QGraphicsOpacityEffect()
@@ -536,7 +536,7 @@ class SettingsWindow(QWidget):
 class SitesWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\sites.png'))
+        self.setWindowIcon(QIcon(r'Photos\\sites.png'))
         self.initialize_ui()
         self.app_data = load_apps_config()
         self.current_app_index = 0
@@ -551,7 +551,7 @@ class SitesWindow(QWidget):
         self.setGeometry(xGL, yGL, 600, 450)
 
         settings_button = QPushButton('', self)
-        settings_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\menu.png'))
+        settings_button.setIcon(QIcon(r'Photos\\menu.png'))
         settings_button.setIconSize(QSize(25, 25))
         settings_button.setFixedSize(30, 30)
         settings_button.setToolTip('Меню') 
@@ -566,15 +566,15 @@ class SitesWindow(QWidget):
 
 
         nvidia_button = QPushButton('NVIDIA', self)
-        nvidia_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\nvidia.png'))
+        nvidia_button.setIcon(QIcon(r'Photos\\nvidia.png'))
         nvidia_button.setToolTip('Сайт NVIDIA')
         amd_button = QPushButton('AMD', self)
         amd_button.setToolTip('Сайт AMD')
-        amd_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\amd.png'))
+        amd_button.setIcon(QIcon(r'Photos\\amd.png'))
         
         intel_button = QPushButton('INTEL', self)
         intel_button.setToolTip('Сайт INTEL')
-        intel_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\intel.png'))
+        intel_button.setIcon(QIcon(r'Photos\\intel.png'))
 
         amd_button.clicked.connect(self.open_amd_site)
         nvidia_button.clicked.connect(self.open_nvidia_site)
@@ -598,7 +598,7 @@ class SitesWindow(QWidget):
 
         settings_layout = QVBoxLayout(self.settings_menu)
         back_button = QPushButton('', self.settings_menu)
-        back_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\back.png'))
+        back_button.setIcon(QIcon(r'Photos\\back.png'))
         back_button.setIconSize(QSize(16, 16))
         back_button.setFixedSize(30, 30)
         back_button.setToolTip('Назад')
@@ -628,7 +628,7 @@ class SitesWindow(QWidget):
         settings_layout.addWidget(none_label)       
 
         info_button = QPushButton('', self.settings_menu)
-        info_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\info1.png'))
+        info_button.setIcon(QIcon(r'Photos\\info1.png'))
         info_button.setIconSize(QSize(16, 16))
         info_button.setFixedSize(30, 30)
         info_button.setToolTip('Iнформацiя')
@@ -636,7 +636,7 @@ class SitesWindow(QWidget):
         settings_layout.addWidget(info_button,alignment=Qt.AlignLeft)
 
         settings_button = QPushButton('', self.settings_menu)
-        settings_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\settings.png')) 
+        settings_button.setIcon(QIcon(r'Photos\\settings.png')) 
         settings_button.setIconSize(QSize(16, 16))
         settings_button.setFixedSize(30, 30)
         settings_button.setToolTip('Налаштування')
@@ -644,7 +644,7 @@ class SitesWindow(QWidget):
         settings_layout.addWidget(settings_button,alignment=Qt.AlignLeft)
 
         folder_button = QPushButton('', self.settings_menu)
-        folder_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\folder.png'))
+        folder_button.setIcon(QIcon(r'Photos\\folder.png'))
         folder_button.setIconSize(QSize(16, 16))
         folder_button.setFixedSize(30, 30)
         folder_button.setToolTip('Вибір папки для завантаження')
@@ -652,7 +652,7 @@ class SitesWindow(QWidget):
         settings_layout.addWidget(folder_button,alignment=Qt.AlignLeft)
 
         exit_button = QPushButton('', self.settings_menu)
-        exit_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\exit.png'))
+        exit_button.setIcon(QIcon(r'Photos\\exit.png'))
         exit_button.setIconSize(QSize(16, 16))
         exit_button.setFixedSize(30, 30)
         exit_button.setToolTip('Вийти з програми') 
@@ -739,7 +739,7 @@ class SitesWindow(QWidget):
 class InformationWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\info1.png'))
+        self.setWindowIcon(QIcon(r'Photos\\info1.png'))
         self.setup_ui()
 
     def setup_ui(self):
@@ -785,7 +785,7 @@ class InformationWindow(QWidget):
 class InstallerWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\main.png'))
+        self.setWindowIcon(QIcon(r'Photos\\main.png'))
         self.initialize_ui()
         self.app_data = load_apps_config()
         self.current_app_index = 0
@@ -803,7 +803,7 @@ class InstallerWindow(QWidget):
         button_layout = QHBoxLayout()
 
         settings_button = QPushButton('', self)
-        settings_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\menu.png'))
+        settings_button.setIcon(QIcon(r'Photos\\menu.png'))
         settings_button.setIconSize(QSize(25, 25))
         settings_button.setFixedSize(30, 30)
         settings_button.setToolTip('Меню') 
@@ -846,7 +846,7 @@ class InstallerWindow(QWidget):
         settings_layout = QVBoxLayout(self.settings_menu)
         
         back_button = QPushButton('', self.settings_menu)
-        back_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\back.png'))
+        back_button.setIcon(QIcon(r'Photos\\back.png'))
         back_button.setIconSize(QSize(16, 16))
         back_button.setFixedSize(30, 30)
         back_button.setToolTip('Назад')
@@ -876,7 +876,7 @@ class InstallerWindow(QWidget):
         settings_layout.addWidget(none_label)       
 
         info_button = QPushButton('', self.settings_menu)
-        info_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\info1.png'))
+        info_button.setIcon(QIcon(r'Photos\\info1.png'))
         info_button.setIconSize(QSize(16, 16))
         info_button.setFixedSize(30, 30)
         info_button.setToolTip('Iнформацiя')
@@ -884,7 +884,7 @@ class InstallerWindow(QWidget):
         settings_layout.addWidget(info_button,alignment=Qt.AlignLeft)
 
         settings_button = QPushButton('', self.settings_menu)
-        settings_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\settings.png')) 
+        settings_button.setIcon(QIcon(r'Photos\\settings.png')) 
         settings_button.setIconSize(QSize(16, 16))
         settings_button.setFixedSize(30, 30)
         settings_button.setToolTip('Налаштування')
@@ -892,7 +892,7 @@ class InstallerWindow(QWidget):
         settings_layout.addWidget(settings_button,alignment=Qt.AlignLeft)
 
         folder_button = QPushButton('', self.settings_menu)
-        folder_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\folder.png'))
+        folder_button.setIcon(QIcon(r'Photos\\folder.png'))
         folder_button.setIconSize(QSize(16, 16))
         folder_button.setFixedSize(30, 30)
         folder_button.setToolTip('Вибір папки для завантаження')
@@ -900,7 +900,7 @@ class InstallerWindow(QWidget):
         settings_layout.addWidget(folder_button,alignment=Qt.AlignLeft)
 
         exit_button = QPushButton('', self.settings_menu)
-        exit_button.setIcon(QIcon('C:\\Projects\\Python\\MassFileDownloader\\Photos\\exit.png'))
+        exit_button.setIcon(QIcon(r'Photos\\exit.png'))
         exit_button.setIconSize(QSize(16, 16))
         exit_button.setFixedSize(30, 30)
         exit_button.setToolTip('Вийти з програми') 
@@ -983,7 +983,7 @@ class InstallerWindow(QWidget):
     def populate_app_list(self):
         apps = load_apps_config()
         for app_name in apps.keys():
-            icon_path = f"C:\\Projects\\Python\\MassFileDownloader\\Photos\\{app_name.lower()}.png"
+            icon_path = fr"Photos\\{app_name.lower()}.png"
             icon = QIcon(icon_path) if os.path.exists(icon_path) else QIcon()
             item = QListWidgetItem(icon, app_name)
             self.app_list_widget.addItem(item)
