@@ -58,8 +58,9 @@
       "url": "https://bits.avcdn.net/productfamily_CCLEANER/insttype_FREE/platform_WIN_PIR/installertype_ONLINE/build_RELEASE/cookie_mmm_ccl_007_999_z8j_m",
       "command": "<file> /silent",
       "original_name": "ccsetup629.exe"
-    },"SQLite": {
-      "url": "https://download.sqlitebrowser.org/DB.Browser.for.SQLite-v3.13.0-win64.msi",
+    },
+    "SQLite": {
+      "url": "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi",
       "command": "<file> /silent",
       "original_name": "DB.Browser.for.SQLite-v3.13.0-win64.msi"
     },"Windscribe": {
@@ -70,6 +71,46 @@
       "url": "https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe",
       "command": "<file> /silent",
       "original_name": "Git-2.47.0-64-bit.exe"
+    },
+    "Procces Hacker":{
+      "url": "https://downloads.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?ts=gAAAAABoUfqnK2YLcKn_HgnK9-elJuDd1-AxjA2w9EqswY-s9aXc66l_t1RcVkaDbPKtUMT0g4RHOb4ZUP0l5NWBecgYYEypNA%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fprocesshacker%2Ffiles%2Flatest%2Fdownload",
+      "command": "<file> /silent",
+      "original_name": "processhacker-2.39-setup.exe"
+    },
+    "Procces Hacker(PORTABLE)":{
+        "url": "https://downloads.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-bin.zip?ts=gAAAAABoUgGFQ-19OCmgCOAiaozqeDOF6fdD2sTR4YpErFCTOdeXP00e3Bst9a7LM9CGKvC8aYXSd6_51DEgBaWiVEIQqgcsKg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fprocesshacker%2Ffiles%2Fprocesshacker2%2Fprocesshacker-2.39-bin.zip%2Fdownload",
+        "command": "<file> /silent",
+        "original_name": "processhacker-2.39-bin.zip"
+    },
+    "Alphares":{
+      "url": "https://github.com/braycarlson/alphares/releases/download/1.1/alphares_x64.exe",
+      "command":"<file> /silent",
+      "original_name": "alphares_x64.exe"
+    },
+    "Crowbar(PORTABLE)":{
+      "url": "https://github.com/ZeqMacaw/Crowbar/releases/download/v0.74/Crowbar_2023-02-16_0.74.7z",
+      "command":"<file> /silent",
+      "original_name": "Crowbar_2023-02-16_0.74.7z"
+    },
+    "UARP Calculate":{
+      "url": "https://github.com/Neatink/AutoCalculate/releases/download/v0.5/Calculate.exe",
+      "command":"<file> /silent",
+      "original_name": "Calculate.exe"
+    },
+    "Firefox":{
+      "url": "https://download.mozilla.org/?product=firefox-stub&os=win&lang=ru",
+      "command":"<file> /silent",
+      "original_name": "Firefox Installer.exe"
+    },
+    "System Informer":{
+      "url": "https://downloads.sourceforge.net/project/systeminformer/systeminformer-3.2.25011-release-setup.exe?ts=gAAAAABoUruKrotjhx5MWGXJzm2_wcyDx-BomdBVNBn7rnTBz-uWkXhVVL4O9yfCjcHavClbmnRqpZU40FdvxKc21KnrhHC_jQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsysteminformer%2Ffiles%2Fsysteminformer-3.2.25011-release-setup.exe%2Fdownload",
+      "command":"<file> /silent",
+      "original_name": "systeminformer-3.2.25011-release-setup.exe"
+    },
+    "System Informer(PORTABLE)":{
+      "url": "https://downloads.sourceforge.net/project/systeminformer/systeminformer-3.2.25011-release-bin.zip?ts=gAAAAABoUruea_WeswylPmsioc0onDXIXmjhMotlRkHCSbSwW9Or7P8pW3Zb1kBs_JXKJoqgZg_Osdu-qsKSkWEe-u4WjCgXLA%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsysteminformer%2Ffiles%2Fsysteminformer-3.2.25011-release-bin.zip%2Fdownload",
+      "command":"<file> /silent",
+      "original_name": "systeminformer-3.2.25011-release-bin.zip"
     }
   }
   

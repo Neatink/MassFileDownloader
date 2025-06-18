@@ -8,7 +8,7 @@ from PyQt5.QtGui import QIcon,QDesktopServices
 from PyQt5.QtCore import Qt, QThread, pyqtSignal,QUrl,QTimer
 import webbrowser
 import sys
-import os
+
 
 class DownloadThread(QThread):
     progress_update = pyqtSignal(str, int, int, int, str)
@@ -207,13 +207,6 @@ class InfoWindow(QWidget):
         start_button.clicked.connect(self.pred_next_step)
         self.layout.addWidget(start_button, alignment=Qt.AlignCenter)
 
-        self.info_link_label = QLabel('<a href="#" style="color: rgba(216, 222, 233, 0.7); text-decoration: none;">Додаткова інформація</a>', self)
-        self.info_link_label.setToolTip('Додаткова інформація про програму')
-        self.info_link_label.setAlignment(Qt.AlignCenter)
-        self.info_link_label.setOpenExternalLinks(True)
-        self.info_link_label.mousePressEvent = self.open_info_html
-        self.layout.addWidget(self.info_link_label)
-
         self.remaining_time_label = QLabel(self)
         self.remaining_time_label.setAlignment(Qt.AlignCenter)
         self.remaining_time_label.setStyleSheet("color: rgba(216, 222, 233, 0.7);")
@@ -248,8 +241,6 @@ class InfoWindow(QWidget):
         self.installer_window.show()
         self.close()
 
-    def open_info_html(self, event):
-        webbrowser.open(r'info.html')
 
     def enable_button(self):
         global start_button  
@@ -290,9 +281,6 @@ class InfoWindow(QWidget):
     def next_step(self):
         global Step
         Step += 1
-
-        if Step == 2 or Step == 3:
-            self.info_link_label.hide()
 
         if Step == 2:
             self.greeting_label.setText("Крок 2:\nВиберіть папку для встановки файлiв:")
@@ -749,6 +737,14 @@ class InformationWindow(QWidget):
 
         layout = QVBoxLayout()
 
+        self.github_label = QLabel("Мiй github", self)
+        self.github_label.setToolTip('Github')
+        self.github_label.setAlignment(Qt.AlignCenter)
+        self.github_label.setOpenExternalLinks(True)
+        self.github_label.mousePressEvent = self.open_github
+        self.github_label.setStyleSheet("color: gold")
+        layout.addWidget(self.github_label)
+
         info_text = (
             'Це інсталятор програм! Завантажте та встановіть необхідні програми легко і швидко.\n\n'
             'Факти про програму:\n'
@@ -766,6 +762,10 @@ class InformationWindow(QWidget):
         layout.addWidget(close_button)
 
         self.setLayout(layout)
+
+
+    def open_github(self,event):
+        webbrowser.open('https://github.com/Neatink/')
 
     def HideInfo(self):
         global GeometryWindow,xGL,yGL,SitesORInstallWindow
@@ -1016,7 +1016,7 @@ class InstallerWindow(QWidget):
         self.downloading_window.show()
         self.hide()
 
-        if app_name in ["Epic Games Laucher", "SQLite"]:
+        if app_name in ["Epic Games Laucher", "SQLite", "Crowbar(PORTABLE)", "Procces Hacker(PORTABLE)", "Alphares", "System Informer(PORTABLE)"]:
             file_name = os.path.join(self.download_directory, f"{app_info['original_name']}")
         else:
             file_name = os.path.join(self.download_directory, f"{app_name}.exe")
